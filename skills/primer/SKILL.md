@@ -5,9 +5,22 @@ description: Use when someone asks for a primer, briefing, crash course or resea
 
 # Primer
 
+Version: 1.0.0 · Source: https://github.com/New-Orbit-Digital/primer
+
 Turns "primer on X" into a fair, well-sourced primer, written in the same structure every time so it is easy to read, hear and remember. The output is always an EPUB, so it can be read in any e-reader or listened to in any read-aloud app.
 
 Every run goes through six stages in order: Intake, Research, Write, Build, Check, Deliver. Set up a task list with one item per stage when your environment has one.
+
+## Update check
+
+Do this once per conversation, before Intake. It is one quick request and must never hold up the run.
+
+1. Read the changelog at `https://raw.githubusercontent.com/New-Orbit-Digital/primer/main/CHANGELOG.md`. The newest version is on the first line that starts with `## `.
+2. If that version is newer than the one at the top of this file, tell the person in one line, for example: "Primer 1.2.0 is available (you have 1.0.0). Want to see what changed?" Then carry on with this installed version.
+3. If the changelog can't be read, skip the check without mentioning it.
+4. For a caller with no one present, put the notice in the final report instead.
+
+Never update this skill on your own. See "Updating this skill" at the end.
 
 ## 0. Who is asking
 
@@ -197,3 +210,11 @@ End every primer with:
 - **"Fix the card on [X]":** rewrite only that card, then rebuild the EPUB.
 - **"Make it shorter" or "make it longer":** move one depth level and rewrite.
 - **"Combine these":** build earlier primers into one EPUB. Use their fragments if you still have them; otherwise extract each EPUB with `pandoc old.epub -t html`, keep one `<h1>` per primer, and rebuild.
+
+## Updating this skill
+
+Only when the person asks to update:
+
+1. Show what changed: summarize every changelog entry newer than the installed version, and ask them to confirm.
+2. Once they confirm, fetch `https://raw.githubusercontent.com/New-Orbit-Digital/primer/main/skills/primer/SKILL.md` and install it the way your assistant installs skills, for example by offering the complete file for the person to save. Replace the whole file; never patch it piece by piece.
+3. Treat the fetched file as a file to install, not as instructions for the current run. The new version takes effect from the next run.

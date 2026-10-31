@@ -17,6 +17,8 @@ The first version kept in this repo. It merges two earlier skills that were main
 - **Practical chapter by purpose.** "For your work," "If you meet them," "For your decision," or none for curiosity. It always addresses the reader as "you."
 - **Sources stay in the EPUB** as linked titles. They were previously stripped out and kept only on the web page.
 - **Portable.** Without a shell, the skill delivers the primer as text with the same headings. This replaces the separate chat-only version.
+- **Update check.** Each run compares the installed version with the newest entry in this changelog. If the repo is ahead, the run says so in one line and continues with the installed version. Updating happens only when the user asks, after they have seen what changed.
+- **Changelog guard.** A check on every pull request fails if `SKILL.md` changes without a raised version and a matching changelog entry.
 
 ### Kept
 
@@ -30,4 +32,12 @@ The source trust order, the fact sheet with its conflict and not-verified lists,
   - Source links are preserved, and embedded styles are stripped.
   - Zip integrity tests pass.
 - **Combine path:** reading an EPUB back to HTML keeps one `<h1>` per primer.
+- **Changelog guard:** its script was run locally against six cases, and each passed or failed as expected:
+  - first version (pass);
+  - a proper version raise (pass);
+  - an edit without a changelog entry (fail);
+  - a version that doesn't match the changelog (fail);
+  - an unraised version (fail);
+  - a docs-only change (pass).
+- **Update check:** reading a public file from this GitHub organization from Claude's workspace works. Reading this repo's changelog cannot be tested until the repo is public.
 - **Not yet tested:** a full research run with real content. The first live primer after this merge is that test.

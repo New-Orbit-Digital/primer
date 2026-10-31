@@ -49,6 +49,14 @@ Many readers listen rather than read. Short sentences, no em-dash asides, spelle
 
 So it can be shared. The skill holds the method. Each person's own assistant holds who they are. The skill is told to use that context when it exists, and never to ask for it or invent it.
 
+## Why updates are flagged, not automatic
+
+- **Fetched pages are information, not instructions.** Assistants are rightly cautious about following instructions from the web. Reading a version number is safe. Silently running whatever the repo says would not be.
+- **The person stays in control.** They see what changed, from the changelog, before they choose to install anything.
+- **Shared copies stay their owners'.** Someone who adapts the skill keeps their version until they choose otherwise.
+
+The changelog guard exists so the version number and the changelog can't drift apart. The update check depends on that.
+
 ## Lineage
 
 Primer began as a design for a card-carousel app (the Card Library Specification, v0.1, August 2026). The skill kept that spec's core ideas: depth from coverage picks, a fixed order, auto-included Debates and Further reading, the brain dump, and follow-up topics. It simplified the rest:

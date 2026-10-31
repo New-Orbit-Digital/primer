@@ -23,9 +23,16 @@ The skill contains nothing about any particular person. If your assistant alread
 
 Another skill, a scheduled task or an automation can run Primer by passing any of: topics, purpose, coverage picks, depth, source files and a title. Primer skips every question that is already answered. Several topics in one call come back as one EPUB.
 
+## Updates
+
+Each run starts with a quick check of this repo's changelog. If a newer version exists, the assistant says so in one line and keeps using the installed copy. Nothing updates on its own. When you ask to update, it shows you what changed, and only after you confirm does it give you the new skill to install.
+
+If you keep your own copy, change the two repository addresses in `SKILL.md` to point at your copy, or delete its Update check section.
+
 ## How changes are made
 
 - Changes land through pull requests.
-- `CHANGELOG.md` records what changed and why.
+- Every change to `SKILL.md` raises the version line at its top and adds a matching entry at the top of `CHANGELOG.md`, in the same pull request. An automatic check on each pull request fails if the two don't match, or if the version wasn't raised.
+- Version numbers: raise the last number for wording fixes, the middle number for new behavior, and the first number for changes to the intake or the output format.
 - `docs/design-notes.md` explains the reasoning behind the format.
-- After a merge, the installed copy of the skill is updated from `skills/primer/SKILL.md` on `main`. The repo is the authoritative copy.
+- The repo is the authoritative copy. Installed copies are updated from `skills/primer/SKILL.md` on `main`.
