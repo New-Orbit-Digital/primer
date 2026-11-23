@@ -18,6 +18,11 @@ Book primers now surface every thesis a book develops. Brevity is a byproduct of
   - Lengths were about 6,500, 6,300 and 7,500 words. All three are above the Research floor of 4,000 words, and all three run past the old 5,500-word ceiling.
   - Every non-cluster card has the five labels in order and is 150 words or fewer. Reaching that took one fix pass on the Dennett primer, where 25 cards had skipped or reordered a label.
   - Build: one text file per chapter, the table of contents lists every chapter and section, source links survive, and the zip integrity test passes.
+- **Second live run, 2026-11-23, from the books' own text:** the same three primers rebuilt from each book's full text. Ten reader agents took chapter notes in parallel, then one writer per book built the primer from the notes.
+  - Thesis maps held 67, 35 and 86 theses, built from each book's table of contents and text. Lengths were about 12,900, 11,900 and 17,500 words.
+  - The same checks pass. One card was 2 words over the 150-word limit and was trimmed.
+  - The book text exposed errors in the secondary-source run. For example, Sagan credits the dragon in the garage to the psychologist Richard Franklin, not to Karl Popper. Several Dennett cards had been placed in the wrong chapter or drawn from his other books, such as the multiple drafts model, which this book never presents.
+  - Finding, not acted on in this version: a book primer built without the book's text is much less reliable, even when every claim is sourced.
 
 ## 1.0.0 — 2026-10-31
 
