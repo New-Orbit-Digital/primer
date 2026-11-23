@@ -1,5 +1,29 @@
 # Changelog
 
+## 1.1.0 — 2026-11-23
+
+Book primers now surface every thesis a book develops. Brevity is a byproduct of summarizing, never a goal: a primer that merges or drops a book's arguments to hit a word count has lost what the reader came for.
+
+### Changed
+
+- **Thesis map.** Research for a book starts with a map of every distinct thesis, argument or foundational topic, in the book's order, with chapters. Frameworks and methods count. The map is built from the book's text when available, otherwise from the full table of contents plus secondary sources.
+- **One section per thesis.** Core ideas lists every thesis at every depth, with no cap. At Conversation and Research depth, every thesis gets its own card or group of cards, in the book's order. Two theses are never merged into one card.
+- **Word counts are a floor for books.** Length follows the thesis count.
+- **Checks and verification.** The check confirms every thesis is covered, and the verification note says what the map was built from and how many theses it holds.
+
+### Verification
+
+- **First live run, 2026-11-23:** three book primers built in parallel at Research depth from secondary sources (Warburton's A Little History of Philosophy, Sagan's The Demon-Haunted World, Dennett's Intuition Pumps), as one EPUB with a series guide and two extra chapters.
+  - Thesis maps held 40, 23 and 32 theses. Every thesis has its own core idea and its own card or group of cards (40, 26 and 35 cards).
+  - Lengths were about 6,500, 6,300 and 7,500 words. All three are above the Research floor of 4,000 words, and all three run past the old 5,500-word ceiling.
+  - Every non-cluster card has the five labels in order and is 150 words or fewer. Reaching that took one fix pass on the Dennett primer, where 25 cards had skipped or reordered a label.
+  - Build: one text file per chapter, the table of contents lists every chapter and section, source links survive, and the zip integrity test passes.
+- **Second live run, 2026-11-23, from the books' own text:** the same three primers rebuilt from each book's full text. Ten reader agents took chapter notes in parallel, then one writer per book built the primer from the notes.
+  - Thesis maps held 67, 35 and 86 theses, built from each book's table of contents and text. Lengths were about 12,900, 11,900 and 17,500 words.
+  - The same checks pass. One card was 2 words over the 150-word limit and was trimmed.
+  - The book text exposed errors in the secondary-source run. For example, Sagan credits the dragon in the garage to the psychologist Richard Franklin, not to Karl Popper. Several Dennett cards had been placed in the wrong chapter or drawn from his other books, such as the multiple drafts model, which this book never presents.
+  - Finding, not acted on in this version: a book primer built without the book's text is much less reliable, even when every claim is sourced.
+
 ## 1.0.0 — 2026-10-31
 
 The first version kept in this repo. It merges two earlier skills that were maintained only as installed copies, `listening-primer` (the more developed one, used as the base) and a chat-only `primer`, into a single `primer` skill.

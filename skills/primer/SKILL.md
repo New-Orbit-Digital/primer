@@ -5,7 +5,7 @@ description: Use when someone asks for a primer, briefing, crash course or resea
 
 # Primer
 
-Version: 1.0.0 · Source: https://github.com/New-Orbit-Digital/primer
+Version: 1.1.0 · Source: https://github.com/New-Orbit-Digital/primer
 
 Turns "primer on X" into a fair, well-sourced primer, written in the same structure every time so it is easy to read, hear and remember. The output is always an EPUB, so it can be read in any e-reader or listened to in any read-aloud app.
 
@@ -55,6 +55,8 @@ A primer can be requested by a person in conversation, or by a caller such as an
 | 1–2 | Conversation | about 10–12 minutes | 1,500–2,000 |
 | 3 or more | Research | 25–35 minutes | 4,000–5,500 |
 
+For a book, these word counts are a floor, not a ceiling. A book's length follows the number of theses it develops (see the thesis map in Research). Never drop, merge or thin a thesis to hit a word count.
+
 If the person skips the questions or says "just do it," use the defaults above and say so in one line.
 
 ## 2. Research
@@ -67,6 +69,8 @@ If the person skips the questions or says "just do it," use the defaults above a
 Never use forums or content farms for facts. Always search anything about the present, such as roles, status, current programs, prices or laws, even if you think you know the answer.
 
 **Books.** When the person has the book as a file (attached, in a folder you can reach, or at a library location your context gives), its text is the primary source. Extract the text (for example `pandoc book.epub -t plain`), read it, and cite chapters instead of URLs. Use outside sources only for the Debates section, and cite them. Without a copy, build from secondary sources and say so in the primer's first line.
+
+**Thesis map (books).** Before the fact sheet, list every distinct thesis, argument or foundational topic the book develops, in the book's order, with the chapters where each appears. A framework or method the book teaches counts as a thesis. Build the map from the book's text when you have it; otherwise from its full table of contents plus secondary sources. Every entry on the map needs at least one sourced claim on the fact sheet. When a batch runs one agent per book, each agent returns its thesis map with its findings.
 
 **How much.** Brief: 3–6 searches. Conversation: 6–12. Research: 15 or more, spread across the coverage picks. At Research depth, and for batches, split the work into threads (one per coverage pick, or one per book) and run them as parallel research agents if you can. Brief each agent:
 
@@ -99,6 +103,8 @@ Each primer uses these sections in this exact order. Include a section only wher
 | 11 | Go deeper (2–4 follow-up topics) | yes | when there is no practical chapter | when there is no practical chapter |
 | 12 | Sources and verification | yes | yes | yes |
 
+**Books follow the thesis map.** In a book primer, Core ideas lists every thesis on the map, one item each, at every depth; the counts in the table do not apply. At Conversation and Research depth, every thesis also gets its own card or group of cards (see Card template), in the book's order rather than date order.
+
 ### The practical chapter
 
 The purpose decides it:
@@ -127,7 +133,8 @@ Every card is a short block with a heading and the same labels in the same order
 
 - Each card runs to 150 words or fewer.
 - Minor items share one cluster card with two labels: **What is in it:** and **Common thread:**.
-- A book gets its own full card. A series of articles or minor papers can share a cluster card. In a book primer, cards cover the book's chapters or frameworks.
+- A book gets its own full card. A series of articles or minor papers can share a cluster card.
+- In a book primer, cards follow the thesis map. Each thesis gets its own card, or its own group of cards under an `<h3>` when it needs more than 150 words. Never merge two theses into one card to save space. Only minor items that are not theses may share a cluster card.
 
 ### Writing rules (everything will be read aloud)
 
@@ -181,7 +188,8 @@ Keep the fragments until the run is over. If someone asks for one primer from a 
 Fix any failure before sending.
 
 - The sections appear in the fixed order, and every card uses the same labels.
-- Each primer's word count is within its depth target.
+- Each primer's word count is within its depth target. For a book, it is at or above the target.
+- For a book, every thesis on the map has its own core idea and, at Conversation and Research depth, its own card or group of cards.
 - Every number and date in the primer is on the fact sheet with a source.
 - The HTML is well formed: every tag that opens also closes.
 - The EPUB opens: `unzip -l SLUG.epub` lists one text file per primer, and the table of contents (`unzip -p SLUG.epub EPUB/nav.xhtml`) lists every primer and its sections.
@@ -192,7 +200,7 @@ Fix any failure before sending.
 End every primer with:
 
 1. **Sources:** each source used, as a linked title.
-2. **Verification:** what the claims were checked against; what could not be verified; where sources disagreed, with both values; any defaults used at intake; and today's date.
+2. **Verification:** what the claims were checked against; what could not be verified; where sources disagreed, with both values; any defaults used at intake; and today's date. For a book, also say what the thesis map was built from and how many theses it holds.
 
 ## 6. Deliver
 
