@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.1.0 — 2026-11-23
+
+Book primers now surface every thesis a book develops. Brevity is a byproduct of summarizing, never a goal: a primer that merges or drops a book's arguments to hit a word count has lost what the reader came for.
+
+### Changed
+
+- **Thesis map.** Research for a book starts with a map of every distinct thesis, argument or foundational topic, in the book's order, with chapters. Frameworks and methods count. The map is built from the book's text when available, otherwise from the full table of contents plus secondary sources.
+- **One section per thesis.** Core ideas lists every thesis at every depth, with no cap. At Conversation and Research depth, every thesis gets its own card or group of cards, in the book's order. Two theses are never merged into one card.
+- **Word counts are a floor for books.** Length follows the thesis count.
+- **Checks and verification.** The check confirms every thesis is covered, and the verification note says what the map was built from and how many theses it holds.
+
+### Verification
+
+- **Not yet tested in a finished run.** The first run under this rule is in progress: three book primers built in parallel on 2026-11-23. This entry will record the result before merge.
+
 ## 1.0.0 — 2026-10-31
 
 The first version kept in this repo. It merges two earlier skills that were maintained only as installed copies, `listening-primer` (the more developed one, used as the base) and a chat-only `primer`, into a single `primer` skill.

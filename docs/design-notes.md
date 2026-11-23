@@ -26,6 +26,10 @@ An early design folded "what's this for" into the coverage menu, to keep intake 
 
 Writing from search results directly lets unsupported claims slip in. Building the fact sheet first, with separate lists for conflicts, unverified items and unreadable pages, makes every claim traceable. It also produces the verification note at the end for free.
 
+## Why a book's length follows its theses
+
+Summarizing makes a primer shorter, but shortness was never the aim. Fixed word targets pushed book primers to merge arguments or drop the minor ones, and a reader cannot ask about an argument they never learned the book made. So a book primer maps every thesis first and gives each its own core idea and card. The depth table's word counts become a floor for books.
+
 ## Why Debates is never optional
 
 Fairness is the core promise. Two duties must not blur:
