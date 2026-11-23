@@ -13,7 +13,11 @@ Book primers now surface every thesis a book develops. Brevity is a byproduct of
 
 ### Verification
 
-- **Not yet tested in a finished run.** The first run under this rule is in progress: three book primers built in parallel on 2026-11-23. This entry will record the result before merge.
+- **First live run, 2026-11-23:** three book primers built in parallel at Research depth from secondary sources (Warburton's A Little History of Philosophy, Sagan's The Demon-Haunted World, Dennett's Intuition Pumps), as one EPUB with a series guide and two extra chapters.
+  - Thesis maps held 40, 23 and 32 theses. Every thesis has its own core idea and its own card or group of cards (40, 26 and 35 cards).
+  - Lengths were about 6,500, 6,300 and 7,500 words. All three are above the Research floor of 4,000 words, and all three run past the old 5,500-word ceiling.
+  - Every non-cluster card has the five labels in order and is 150 words or fewer. Reaching that took one fix pass on the Dennett primer, where 25 cards had skipped or reordered a label.
+  - Build: one text file per chapter, the table of contents lists every chapter and section, source links survive, and the zip integrity test passes.
 
 ## 1.0.0 — 2026-10-31
 
